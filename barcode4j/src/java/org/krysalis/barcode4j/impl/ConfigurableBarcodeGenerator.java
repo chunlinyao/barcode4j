@@ -125,6 +125,45 @@ public abstract class ConfigurableBarcodeGenerator
             }
         }
 
+        //Vertical inkspread
+        String iss = cfg.getChild("ink-spread").getValue(null);
+        if (iss != null) {
+            Length is = new Length(iss, Length.INCH);
+            if (is.getUnit().equalsIgnoreCase("mw")) {
+                getBean().setInkspread(
+                        is.getValue() * getBean().getModuleWidth());
+            } else {
+                getBean().setInkspread(
+                        is.getValueAsMillimeter());
+            }
+        }
+
+        //Vertical inkspread
+        String viss = cfg.getChild("vertical-ink-spread").getValue(null);
+        if (viss != null) {
+            Length vis = new Length(viss, Length.INCH);
+            if (vis.getUnit().equalsIgnoreCase("mw")) {
+                getBean().setInkspreadv(
+                        vis.getValue() * getBean().getModuleWidth());
+            } else {
+                getBean().setInkspreadv(
+                        vis.getValueAsMillimeter());
+            }
+        }
+
+        //Horizontal inkspread
+        String hiss = cfg.getChild("horizontal-ink-spread").getValue(null);
+        if (hiss != null) {
+            Length his = new Length(hiss, Length.INCH);
+            if (his.getUnit().equalsIgnoreCase("mw")) {
+                getBean().setInkspreadh(
+                        his.getValue() * getBean().getModuleWidth());
+            } else {
+                getBean().setInkspreadh(
+                        his.getValueAsMillimeter());
+            }
+        }
+
         Configuration hr = cfg.getChild("human-readable", false);
         if ((hr != null) && (hr.getChildren().length > 0)) {
             //Human-readable placement

@@ -47,6 +47,10 @@ public abstract class AbstractBarcodeBean
     protected Double quietZoneVertical;
     /** pattern to be applied over the human readable message */
     protected String pattern;
+    /** inkspread reduce the bar width horizontally */
+    protected double inkspreadh;
+    /** inkspread reduce the bar width vertically */
+    protected double inkspreadv;
 
     /**
      * returns the pattern to be applied over the human readable message
@@ -245,6 +249,47 @@ public abstract class AbstractBarcodeBean
      */
     public void setFontName(String name) {
         this.fontName = name;
+    }
+
+    /**
+     * Sets h & v inkspread
+     * @param inkspread
+     */
+    public void setInkspread(double inkspread) {
+        this.inkspreadh = inkspread;
+        this.inkspreadv = inkspread;
+    }
+
+    /**
+     * Return the horizontal inkspread
+     * @return the ink spread
+     */
+    public double getInkspreadh() {
+        return inkspreadh;
+    }
+
+    /**
+     * Sets horizontal inkspread
+     * @param inkspreadh
+     */
+    public void setInkspreadh(double inkspreadh) {
+        this.inkspreadh = inkspreadh;
+    }
+
+    /**
+     * Return the vertical inkspread
+     * @return the ink spread
+     */
+    public double getInkspreadv() {
+        return inkspreadv;
+    }
+
+    /**
+     * Sets vertial inkspread
+     * @param inkspreadv
+     */
+    public void setInkspreadv(double inkspreadv) {
+        this.inkspreadv = inkspreadv;
     }
 
     /** {@inheritDoc} */

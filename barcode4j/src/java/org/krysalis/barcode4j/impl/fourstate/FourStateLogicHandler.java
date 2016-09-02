@@ -54,7 +54,9 @@ public class FourStateLogicHandler
     public void addBar(boolean black, int height) {
         final double w = bcBean.getBarWidth(1);
         final double h = bcBean.getBarHeight(height);
-        
+        final double rh = bcBean.getInkspreadh();
+        final double rv = bcBean.getInkspreadv();
+
         final double middle = bcBean.getBarHeight() / 2;
         double y1;
         switch (height) {
@@ -70,7 +72,7 @@ public class FourStateLogicHandler
             throw new RuntimeException("Bug!");
         }
         
-        canvas.drawRectWH(x, getStartY() + y1, w, h);
+        canvas.drawRectWH(x+(rh/2.0), getStartY() + y1 + (rv/2.0), w-rh, h-rv);
         x += w + bcBean.getBarWidth(-1);
     }
 

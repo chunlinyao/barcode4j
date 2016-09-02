@@ -81,8 +81,10 @@ public class DefaultTwoDimCanvasLogicHandler implements TwoDimBarcodeLogicHandle
     /** @see org.krysalis.barcode4j.ClassicBarcodeLogicHandler */
     public void addBar(boolean black, int width) {
         final double w = bcBean.getBarWidth(width);
+        final double rh = bcBean.getInkspreadh();
+        final double rv = bcBean.getInkspreadv();
         if (black) {
-            canvas.drawRectWH(x, y, w, bcBean.getBarHeight());
+            canvas.drawRectWH(x+(rh/2.0), y+(rv/2.0), w-rh, bcBean.getBarHeight()-rv);
         }
         x += w;
     }

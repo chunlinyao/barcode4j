@@ -142,6 +142,9 @@
     &#60;interchar-gap-width&#62;<link href="#length">1mw</link>&#60;/interchar-gap-width&#62;
     &#60;quiet-zone enabled="<link href="#boolean">true</link>"&#62;<link href="#length">10mw</link>&#60;/quiet-zone&#62;
     &#60;checksum&#62;<link href="#checksum-mode">auto</link>&#60;/checksum&#62;
+    &#60;ink-spread&#62;<link href="#length">0.05mw</link>&#60;/ink-spread&#62;
+    &#60;horizontal-ink-spread&#62;<link href="#length">0.05mw</link>&#60;/horizontal-ink-spread&#62;
+    &#60;vertical-ink-spread&#62;<link href="#length">0.05mw</link>&#60;/vertical-ink-spread&#62;
     &#60;human-readable&#62;
       &#60;placement&#62;<link href="#human-readable-placement">bottom</link>&#60;/placement&#62;
       &#60;font-name&#62;<link href="#font-name">Helvetica</link>&#60;/font-name&#62;

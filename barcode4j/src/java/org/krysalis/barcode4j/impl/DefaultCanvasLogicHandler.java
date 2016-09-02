@@ -98,8 +98,9 @@ public class DefaultCanvasLogicHandler implements ClassicBarcodeLogicHandler {
     /** {@inheritDoc} */
     public void addBar(boolean black, int width) {
         final double w = bcBean.getBarWidth(width);
+        final double reduction = bcBean.getInkspreadh();
         if (black) {
-            canvas.drawRectWH(x, y, w, bcBean.getBarHeight());
+            canvas.drawRectWH(x + (reduction / 2.0), y, w-reduction, bcBean.getBarHeight());
         }
         x += w;
     }

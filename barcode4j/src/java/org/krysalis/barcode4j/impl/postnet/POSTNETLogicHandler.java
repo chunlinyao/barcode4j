@@ -60,20 +60,22 @@ public class POSTNETLogicHandler
         POSTNETBean pnBean = (POSTNETBean)bcBean;
         final double w = black ? bcBean.getBarWidth(1) : bcBean.getBarWidth(-1);
         final double h = bcBean.getBarHeight(height);
+        final double rh = bcBean.getInkspreadh();
+        final double rv = bcBean.getInkspreadv();
         final BaselineAlignment baselinePosition = pnBean.getBaselinePosition();
         
         if (black) {
             if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_TOP) {
                 if (baselinePosition == BaselineAlignment.ALIGN_TOP) {
-                    canvas.drawRectWH(x, y + bcBean.getHumanReadableHeight(), w, h);
+                    canvas.drawRectWH(x + (rh/2.0), y + bcBean.getHumanReadableHeight()+(rv/2.0), w-rh, h-rv);
                 } else if (baselinePosition == BaselineAlignment.ALIGN_BOTTOM) {
-                    canvas.drawRectWH(x, y + bcBean.getHeight() - h, w, h);
+                    canvas.drawRectWH(x + (rh/2.0), y + bcBean.getHeight() - h + (rv/2.0), w-rh, h-rv);
                 }
             } else {
                 if (baselinePosition == BaselineAlignment.ALIGN_TOP) {
-                    canvas.drawRectWH(x, y, w, h);
+                    canvas.drawRectWH(x + (rh/2.0), y + (rv/2.0), w-rh, h-rv);
                 } else if (baselinePosition == BaselineAlignment.ALIGN_BOTTOM) {
-                    canvas.drawRectWH(x, y + bcBean.getBarHeight() - h, w, h);
+                    canvas.drawRectWH(x + (rh/2.0), y + bcBean.getBarHeight() - h + (rv/2.0), w-rh, h-rv);
                 } 
             }
         }

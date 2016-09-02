@@ -106,12 +106,14 @@ public class UPCEANCanvasLogicHandler implements ClassicBarcodeLogicHandler {
     /** @see org.krysalis.barcode4j.ClassicBarcodeLogicHandler */
     public void addBar(boolean black, int width) {
         final double w = bcBean.getBarWidth(width);
+        final double rh = bcBean.getInkspreadh();
+        final double rv = bcBean.getInkspreadv();
         if (black) {
             final double h;
             final double y;
             if (!inSupplemental) {
                 if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_NONE) {
-                    canvas.drawRectWH(x, 0, w, bcBean.getHeight());
+                    canvas.drawRectWH(x+(rh/2.0), 0+(rv/2.0), w-rh, bcBean.getHeight()-rv);
                 } else if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_TOP) {
                     if (inMsgGroup) {
                         h = bcBean.getBarHeight();
@@ -120,33 +122,33 @@ public class UPCEANCanvasLogicHandler implements ClassicBarcodeLogicHandler {
                         h = bcBean.getBarHeight() + (bcBean.getHumanReadableHeight() / 2);
                         y = bcBean.getHumanReadableHeight() / 2;
                     }
-                    canvas.drawRectWH(x, y, w, h);
+                    canvas.drawRectWH(x+(rh/2.0), y+(rv/2.0), w-rh, h-rv);
                 } else if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_BOTTOM) {
                     if (inMsgGroup) {
                         h = bcBean.getBarHeight();
                     } else {
                         h = bcBean.getBarHeight() + (bcBean.getHumanReadableHeight() / 2);
                     }
-                    canvas.drawRectWH(x, 0.0, w, h);
+                    canvas.drawRectWH(x+(rh/2.0), 0.0+(rv/2.0), w-rh, h-rv);
                 }
             } else {
                 //Special painting in supplemental
                 if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_NONE) {
                     h = bcBean.getBarHeight();
                     y = bcBean.getHumanReadableHeight();
-                    canvas.drawRectWH(x, y, w, h);
+                    canvas.drawRectWH(x+(rh/2.0), y+(rv/2.0), w-rh, h-rv);
                 } else if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_TOP) {
                     h = bcBean.getBarHeight() 
                         + (bcBean.getHumanReadableHeight() / 2)
                         - bcBean.getHumanReadableHeight();
                     y = bcBean.getHumanReadableHeight() / 2;
-                    canvas.drawRectWH(x, y, w, h);
+                    canvas.drawRectWH(x+(rh/2.0), y+(rv/2.0), w-rh, h-rv);
                 } else if (bcBean.getMsgPosition() == HumanReadablePlacement.HRP_BOTTOM) {
                     h = bcBean.getBarHeight() 
                         + (bcBean.getHumanReadableHeight() / 2)
                         - bcBean.getHumanReadableHeight();
                     y = bcBean.getHumanReadableHeight();
-                    canvas.drawRectWH(x, y, w, h);
+                    canvas.drawRectWH(x+(rh/2.0), y+(rv/2.0), w-rh, h-rv);
                 }
             }
         }
