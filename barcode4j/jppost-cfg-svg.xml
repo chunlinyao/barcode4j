@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<barcode>
+  <jppost>
+      <module-width>0.15pt</module-width>
+      <track-height>0.4pt</track-height>
+      <ascender-height>0.4pt</ascender-height>
+      <interchar-gap-width>1mw</interchar-gap-width>
+      <quiet-zone enabled="true">10mw</quiet-zone>
+      <checksum>auto</checksum>
+  </jppost>
+</barcode>

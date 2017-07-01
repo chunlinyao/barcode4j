@@ -354,6 +354,7 @@
         <exclude name="org/krysalis/barcode4j/impl/postnet/POSTNET.class"/>
         <exclude name="org/krysalis/barcode4j/impl/fourstate/RoyalMailCBC.class"/>
         <exclude name="org/krysalis/barcode4j/impl/fourstate/USPSIntelligentMail.class"/>
+        <exclude name="org/krysalis/barcode4j/impl/fourstate/JapanPostCBC.class"/>
         <exclude name="org/krysalis/barcode4j/impl/upcean/EAN13.class"/>
         <exclude name="org/krysalis/barcode4j/impl/upcean/EAN8.class"/>
         <exclude name="org/krysalis/barcode4j/impl/upcean/UPCA.class"/>
