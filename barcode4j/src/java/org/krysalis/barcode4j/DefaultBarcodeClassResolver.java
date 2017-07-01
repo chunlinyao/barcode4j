@@ -54,6 +54,7 @@ public class DefaultBarcodeClassResolver implements BarcodeClassResolver {
         registerBarcodeClass("ean13", "org.krysalis.barcode4j.impl.upcean.EAN13");
         registerBarcodeClass("ean-8", "org.krysalis.barcode4j.impl.upcean.EAN8", true);
         registerBarcodeClass("ean8", "org.krysalis.barcode4j.impl.upcean.EAN8");
+        registerBarcodeClass("jppost", "org.krysalis.barcode4j.impl.fourstate.JapanPostCBC");	// hozawa 2015/03/31
         registerBarcodeClass("upc-a", "org.krysalis.barcode4j.impl.upcean.UPCA", true);
         registerBarcodeClass("upca", "org.krysalis.barcode4j.impl.upcean.UPCA");
         registerBarcodeClass("upc-e", "org.krysalis.barcode4j.impl.upcean.UPCE", true);
