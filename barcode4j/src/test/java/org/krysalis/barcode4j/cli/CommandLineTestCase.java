@@ -19,7 +19,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.PrintStream;
 
-import org.apache.avalon.framework.ExceptionUtil;
+import org.krysalis.barcode4j.ExceptionUtil;
 import org.krysalis.barcode4j.AbstractBarcodeTestCase;
 
 /**

@@ -31,9 +31,8 @@ import org.w3c.dom.Element;
 
 import org.xml.sax.Attributes;
 
-import org.apache.avalon.framework.CascadingRuntimeException;
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
 
 import org.apache.fop.apps.FOPException;
 import org.apache.fop.fo.DirectPropertyListBuilder;
@@ -107,7 +106,7 @@ public class BarcodeElement extends BarcodeObj {
             factory.setNamespaceAware(true);
             this.doc = factory.newDocumentBuilder().newDocument();
         } catch (ParserConfigurationException pce) {
-            throw new CascadingRuntimeException("Error creating DOM", pce);
+            throw new RuntimeException("Error creating DOM", pce);
         }
         this.doc.appendChild(this.doc.createElementNS(BarcodeConstants.NAMESPACE, "barcode"));
 

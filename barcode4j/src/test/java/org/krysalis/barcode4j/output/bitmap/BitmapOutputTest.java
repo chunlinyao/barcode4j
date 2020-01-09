@@ -25,8 +25,8 @@ import org.krysalis.barcode4j.BarcodeException;
 import org.krysalis.barcode4j.BarcodeGenerator;
 import org.krysalis.barcode4j.BarcodeUtil;
 
-import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
 
 /**
  * Test class for basic bitmap output functionality.

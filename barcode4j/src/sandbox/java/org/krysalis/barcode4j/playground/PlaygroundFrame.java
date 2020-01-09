@@ -19,7 +19,7 @@ import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
 import org.krysalis.barcode4j.BarcodeGenerator;
 import org.krysalis.barcode4j.BarcodeUtil;
 

@@ -22,7 +22,7 @@ import org.krysalis.barcode4j.impl.postnet.POSTNET;
 import org.krysalis.barcode4j.impl.postnet.POSTNETBean;
 import org.krysalis.barcode4j.impl.postnet.POSTNETLogicImpl;
 
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
 
 /**
  * Test class for the POSTNET implementation.
@@ -65,7 +65,7 @@ public class POSTNETTest extends TestCase {
         
         try {
             logic = new POSTNETLogicImpl(ChecksumMode.CP_AUTO, false);
-            logic.generateBarcodeLogic(new NullClassicBarcodeLogicHandler(), "123èöö2");
+            logic.generateBarcodeLogic(new NullClassicBarcodeLogicHandler(), "123ï¿½ï¿½ï¿½2");
             fail("Expected an exception complaining about illegal characters");
         } catch (IllegalArgumentException iae) {
             //must fail

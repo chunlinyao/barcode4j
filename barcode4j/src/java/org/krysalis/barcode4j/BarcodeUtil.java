@@ -18,9 +18,9 @@ package org.krysalis.barcode4j;
 import org.krysalis.barcode4j.output.svg.SVGCanvasProvider;
 import org.w3c.dom.DocumentFragment;
 
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.avalon.framework.container.ContainerUtil;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
+import org.krysalis.barcode4j.container.ContainerUtil;
 
 /**
  * This is a convenience class to generate barcodes. It is implemented as

@@ -17,7 +17,7 @@ package org.krysalis.barcode4j.cli;
 
 import java.io.PrintStream;
 
-import org.apache.avalon.framework.logger.Logger;
+import org.krysalis.barcode4j.logger.Logger;
 
 /**
  * Special Logger implementation that can split output between stdout and stderr
@@ -93,112 +93,112 @@ public class AdvancedConsoleLogger implements Logger {
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#debug(String)
+     * @see Logger#debug(String)
      */
     public void debug(String msg) {
         debug(msg, null);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#debug(String, Throwable)
+     * @see Logger#debug(String, Throwable)
      */
     public void debug(String msg, Throwable t) {
         logMessage(msg, t, LEVEL_DEBUG);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#isDebugEnabled()
+     * @see Logger#isDebugEnabled()
      */
     public boolean isDebugEnabled() {
         return (logLevel <= LEVEL_DEBUG);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#info(String)
+     * @see Logger#info(String)
      */
     public void info(String msg) {
         info(msg, null);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#info(String, Throwable)
+     * @see Logger#info(String, Throwable)
      */
     public void info(String msg, Throwable t) {
         logMessage(msg, t, LEVEL_INFO);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#isInfoEnabled()
+     * @see Logger#isInfoEnabled()
      */
     public boolean isInfoEnabled() {
         return (logLevel <= LEVEL_INFO);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#warn(String)
+     * @see Logger#warn(String)
      */
     public void warn(String msg) {
         warn(msg, null);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#warn(String, Throwable)
+     * @see Logger#warn(String, Throwable)
      */
     public void warn(String msg, Throwable t) {
         logMessage(msg, t, LEVEL_WARN);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#isWarnEnabled()
+     * @see Logger#isWarnEnabled()
      */
     public boolean isWarnEnabled() {
         return (logLevel <= LEVEL_WARN);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#error(String)
+     * @see Logger#error(String)
      */
     public void error(String msg) {
         error(msg, null);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#error(String, Throwable)
+     * @see Logger#error(String, Throwable)
      */
     public void error(String msg, Throwable t) {
         logMessage(msg, t, LEVEL_ERROR);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#isErrorEnabled()
+     * @see Logger#isErrorEnabled()
      */
     public boolean isErrorEnabled() {
         return (logLevel <= LEVEL_ERROR);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#fatalError(String)
+     * @see Logger#fatalError(String)
      */
     public void fatalError(String msg) {
         fatalError(msg, null);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#fatalError(String, Throwable)
+     * @see Logger#fatalError(String, Throwable)
      */
     public void fatalError(String msg, Throwable t) {
         logMessage(msg, t, LEVEL_FATAL);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#isFatalErrorEnabled()
+     * @see Logger#isFatalErrorEnabled()
      */
     public boolean isFatalErrorEnabled() {
         return (logLevel <= LEVEL_FATAL);
     }
 
     /**
-     * @see org.apache.avalon.framework.logger.Logger#getChildLogger(String)
+     * @see Logger#getChildLogger(String)
      */
     public Logger getChildLogger(String name) {
         return this;

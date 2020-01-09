@@ -1,6 +1,6 @@
 /*
  * Copyright 2002-2004 Jeremias Maerki.
- * Copyright 2005 Jeremias Maerki, Dietmar Bürkle.
+ * Copyright 2005 Jeremias Maerki, Dietmar Bï¿½rkle.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 package org.krysalis.barcode4j.impl.code128;
 
 
-import org.apache.avalon.framework.configuration.Configurable;
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.Configurable;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
 import org.krysalis.barcode4j.ChecksumMode;
 import org.krysalis.barcode4j.tools.Length;
 
 /**
  * This class is an implementation of the Code 128 barcode.
  * 
- * @author Jeremias Maerki, Dietmar Bürkle
+ * @author Jeremias Maerki, Dietmar Bï¿½rkle
  */
 public class EAN128 extends Code128 
             implements Configurable {
@@ -43,7 +43,7 @@ public class EAN128 extends Code128
         return (EAN128Bean)getBean();
     }
     /**
-     * @see org.apache.avalon.framework.configuration.Configurable#configure(Configuration)
+     * @see Configurable#configure(Configuration)
      */
     public void configure(Configuration cfg) throws ConfigurationException {
         //Module width (MUST ALWAYS BE FIRST BECAUSE QUIET ZONE MAY DEPEND ON IT)

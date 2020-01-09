@@ -15,9 +15,9 @@
  */
 package org.krysalis.barcode4j.impl.upcean;
 
-import org.apache.avalon.framework.configuration.Configurable;
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.Configurable;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
 import org.krysalis.barcode4j.ChecksumMode;
 import org.krysalis.barcode4j.impl.ConfigurableBarcodeGenerator;
 import org.krysalis.barcode4j.tools.Length;
@@ -32,7 +32,7 @@ public abstract class UPCEAN extends ConfigurableBarcodeGenerator
             implements Configurable {
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configurable#configure(Configuration)
+     * @see Configurable#configure(Configuration)
      */
     public void configure(Configuration cfg) throws ConfigurationException {
         //Module width (MUST ALWAYS BE FIRST BECAUSE QUIET ZONE MAY DEPEND ON IT)

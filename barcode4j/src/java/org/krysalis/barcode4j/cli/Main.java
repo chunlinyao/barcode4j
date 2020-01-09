@@ -39,11 +39,11 @@ import org.krysalis.barcode4j.output.eps.EPSCanvasProvider;
 import org.krysalis.barcode4j.output.svg.SVGCanvasProvider;
 import org.krysalis.barcode4j.tools.MimeTypes;
 
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
-import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
-import org.apache.avalon.framework.logger.Logger;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.configuration.DefaultConfigurationBuilder;
+import org.krysalis.barcode4j.logger.Logger;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.HelpFormatter;

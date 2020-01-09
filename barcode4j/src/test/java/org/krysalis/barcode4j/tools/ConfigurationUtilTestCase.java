@@ -18,7 +18,7 @@ package org.krysalis.barcode4j.tools;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.avalon.framework.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.Configuration;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

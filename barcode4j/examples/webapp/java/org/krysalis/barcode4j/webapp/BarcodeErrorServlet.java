@@ -33,9 +33,8 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
-import org.apache.avalon.framework.CascadingException;
-import org.apache.avalon.framework.logger.ConsoleLogger;
-import org.apache.avalon.framework.logger.Logger;
+import org.krysalis.barcode4j.logger.ConsoleLogger;
+import org.krysalis.barcode4j.logger.Logger;
 
 /**
  * Error handler servlet for Barcode exceptions.
@@ -112,11 +111,6 @@ public class BarcodeErrorServlet extends HttpServlet {
         char[] chars = t.getMessage().toCharArray();
         handler.characters(chars, 0, chars.length);
         handler.endElement(null, "msg", "msg");
-
-        if (t instanceof CascadingException) {
-            Throwable nested = ((CascadingException)t).getCause();
-            generateSAXForException(nested, handler, "nested");
-        }
 
         handler.endElement(null, elName, elName);
     }

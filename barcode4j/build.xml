@@ -325,6 +325,7 @@
       <metainf dir="${basedir}" includes="LICENSE,NOTICE"/>
       <fileset dir="${build.dest}">
         <include name="org/krysalis/**"/>
+        <include name="org/apache/**"/>
       </fileset>
     </jar>
     
@@ -617,7 +618,6 @@
     </javac>
     <war warfile="${build.dir}/${name}.war" webxml="${webapp.dir}/conf/web.xml">
       <lib dir="${lib.dir}">
-        <include name="avalon-framework*.jar"/>
         <include name="zxing*.jar"/>
       </lib>
       <lib dir="${build.dir}">

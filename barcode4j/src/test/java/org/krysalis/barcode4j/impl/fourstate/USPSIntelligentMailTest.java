@@ -25,7 +25,7 @@ import junit.framework.TestCase;
 
 import org.krysalis.barcode4j.impl.MockClassicBarcodeLogicHandler;
 
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
 
 /**
  * Tests for the USPS Intelligent Mail Barcode (4-State Customer Barcode).
@@ -215,7 +215,7 @@ public class USPSIntelligentMailTest extends TestCase {
             String expected = results[i];
             //System.out.println(expected);
             //System.out.println(sb.toString());
-            assertEquals("Expected result n° " + i + " does not match", expected, sb.toString());
+            assertEquals("Expected result nï¿½ " + i + " does not match", expected, sb.toString());
         }
     }
     

@@ -16,7 +16,7 @@
       <title>Preparing the barcode generator configuration</title>
       <p><strong>Barcode4J</strong> depends on the <jump href="ext:avalon">Apache Avalon Framework</jump>
         for configuration. So the first step is to prepare an 
-        <code>org.apache.avalon.framework.configuration.Configuration</code> object. There are several ways to obtain it:</p>
+        <code>org.krysalis.barcode4j.configuration.Configuration</code> object. There are several ways to obtain it:</p>
       <ul>
         <li>In an Avalon-based system you will probably already have <code>Configuration</code> objects around.</li>
         <li>You can build it from an XML file:</li>
@@ -38,7 +38,7 @@ import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
           SAXConfigurationHandler).
         </li>
         <li>You can build the Configuration object tree by hand using 
-          <code>org.apache.avalon.framework.configuration.DefaultConfiguration</code>.</li>
+          <code>org.krysalis.barcode4j.configuration.DefaultConfiguration</code>.</li>
       </ul>
     </section>
     <section>

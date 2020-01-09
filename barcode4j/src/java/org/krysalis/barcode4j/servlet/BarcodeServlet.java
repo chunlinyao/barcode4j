@@ -35,10 +35,10 @@ import org.krysalis.barcode4j.output.eps.EPSCanvasProvider;
 import org.krysalis.barcode4j.output.svg.SVGCanvasProvider;
 import org.krysalis.barcode4j.tools.MimeTypes;
 
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.DefaultConfiguration;
-import org.apache.avalon.framework.logger.ConsoleLogger;
-import org.apache.avalon.framework.logger.Logger;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.DefaultConfiguration;
+import org.krysalis.barcode4j.logger.ConsoleLogger;
+import org.krysalis.barcode4j.logger.Logger;
 
 /**
  * Simple barcode servlet.

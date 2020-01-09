@@ -17,9 +17,9 @@ package org.krysalis.barcode4j.xalan;
 
 import java.util.List;
 
-import org.apache.avalon.framework.configuration.AbstractConfiguration;
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
+import org.krysalis.barcode4j.configuration.AbstractConfiguration;
+import org.krysalis.barcode4j.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.ConfigurationException;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -44,35 +44,35 @@ public class ElemWrappingConfiguration extends AbstractConfiguration {
     }
     
     /**
-     * @see org.apache.avalon.framework.configuration.AbstractConfiguration#getPrefix()
+     * @see AbstractConfiguration#getPrefix()
      */
     protected String getPrefix() throws ConfigurationException {
         return null;
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getName()
+     * @see Configuration#getName()
      */
     public String getName() {
         return this.elem.getLocalName();
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getLocation()
+     * @see Configuration#getLocation()
      */
     public String getLocation() {
         return "unknown";
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getNamespace()
+     * @see Configuration#getNamespace()
      */
     public String getNamespace() throws ConfigurationException {
         return null;
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getChildren()
+     * @see Configuration#getChildren()
      */
     public Configuration[] getChildren() {
         Configuration[] cfgList = new Configuration[this.elem.getChildNodes().getLength()];
@@ -83,7 +83,7 @@ public class ElemWrappingConfiguration extends AbstractConfiguration {
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getChildren(java.lang.String)
+     * @see Configuration#getChildren(java.lang.String)
      */
     public Configuration[] getChildren(String name) {
         List cfgList = new java.util.LinkedList();
@@ -99,14 +99,14 @@ public class ElemWrappingConfiguration extends AbstractConfiguration {
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getAttributeNames()
+     * @see Configuration#getAttributeNames()
      */
     public String[] getAttributeNames() {
         throw new UnsupportedOperationException("getAttributeNames() is not supported");
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getAttribute(java.lang.String)
+     * @see Configuration#getAttribute(java.lang.String)
      */
     public String getAttribute(String name) throws ConfigurationException {
         final String s = this.elem.getAttribute(name);
@@ -118,7 +118,7 @@ public class ElemWrappingConfiguration extends AbstractConfiguration {
     }
 
     /**
-     * @see org.apache.avalon.framework.configuration.Configuration#getValue()
+     * @see Configuration#getValue()
      */
     public String getValue() throws ConfigurationException {
         //System.out.println(elem.getClass().getName() + " " + elem.getLocalName());

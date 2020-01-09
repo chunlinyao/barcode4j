@@ -35,7 +35,7 @@ import org.krysalis.barcode4j.tools.UnitConv;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 
-import org.apache.avalon.framework.configuration.Configuration;
+import org.krysalis.barcode4j.configuration.Configuration;
 import org.apache.batik.dom.svg.SVGDOMImplementation;
 
 import org.apache.xmlgraphics.java2d.Graphics2DImagePainter;
